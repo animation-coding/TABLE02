@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    
+
+  <div class="container">
+    <div class="top">
+      <h1>Plans & Pricing</h1>
+      <div class="toggle-btn">
+          <span style="margin: 0.8em;">Annually</span>
+          <label class="switch">
+              <input type="checkbox" id="checbox" onclick="check()" ; />
+              <span class="slider round"></span>
+          </label>
+           <span style="margin: 0.8em;">Monthly</span>
+      </div>
+    </div>
+
+    <div class="package-container">
+
+      <div class="packages">
+        <h1>Basic</h1>
+        <h2 class="text1">Free</h2>
+        <h2 class="text2">Free</h2>
+        <ul class="list">
+          <li class="first">5 HTML Template</li>
+          <li>2 Free Vector</li>
+          <li>PSD File</li>
+          <li>Support</li>
+        </ul>
+        <a href="#" class="button button1">Start free trial</a>
+      </div>
+
+      <div class="packages">
+        <h1>Professional</h1>
+        <h2 class="text1">&dollar;19.99</h2>
+        <h2 class="text2">&dollar;239.99</h2>
+        <ul class="list">
+          <li class="first">10 HTML Template</li>
+          <li>8 Free Vector</li>
+          <li>PSD File</li>
+          <li>Support</li>
+        </ul>
+        <a href="#" class="button button2">Get started now</a>
+      </div>
+
+      <div class="packages">
+        <h1>Master</h1>
+        <h2 class="text1">&dollar;29.99</h2>
+        <h2 class="text2">&dollar;359.99</h2>
+        <ul class="list">
+            <li class="first">30 HTML Template</li>
+            <li>14 Free Vector</li>
+            <li>PSD File</li>
+            <li>Support</li>
+        </ul>
+        <a href="#" class="button button3">Get started now</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<script>
+
+function check() 
+{
+  var checkBox = document.getElementById("checbox");
+  var text1 = document.getElementsByClassName("text1");
+  var text2 = document.getElementsByClassName("text2");
+  for (var i = 0; i < text1.length; i++) 
+  {
+    if (checkBox.checked == true) 
+    {
+      text1[i].style.display = "block";
+      text2[i].style.display = "none";
+    } else if (checkBox.checked == false) 
+    {
+      text1[i].style.display = "none";
+      text2[i].style.display = "block";}
+  }
+}
+check();
+
+</script>
+</body>
+</html>

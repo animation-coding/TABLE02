@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Table HTML CSS & JS</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="top">
+        <h1>Plan & Pricing</h1>
+        <div class="toggle-btn">
+            <span class="back">Annually</span>
+            <label class="switch">
+                <input type="checkbox" id="checkbox" onclick="check()" ; />
+                <span class="slider round"></span>
+            </label>
+            <span class="back">Monthly</span>
+        </div>
+    </div>
+
+    <div class="package-container">
+
+        <div class="packages">
+            <h1>Basic</h1>
+            <h2 class="text1">Free</h2>
+            <h2 class="text2">Free</h2>
+            <ul class="list">
+                <li class="first">5 HTML Template</li>
+                <li>2 Free Vector</li>
+                <li>PSD File</li>
+                <li>Support</li>
+            </ul>
+            <a href="#" class="button button3">Get free trial</a>
+        </div>
+
+        <div class="packages">
+            <h1>Professional</h1>
+            <h2 class="text1">$20.99</h2>
+            <h2 class="text2">$240.99</h2>
+            <ul class="list">
+                <li class="first">10 HTML Template</li>
+                <li>8 Free Vector</li>
+                <li>PSD File</li>
+                <li>Support</li>
+            </ul>
+            <a href="#" class="button button2">Get started now</a>
+        </div>
+
+        <div class="packages">
+            <h1>Master</h1>
+            <h2 class="text1">$30.99</h2>
+            <h2 class="text2">$340.99</h2>
+            <ul class="list">
+                <li class="first">5 HTML Template</li>
+                <li>2 Free Vector</li>
+                <li>PSD File</li>
+                <li>Support</li>
+            </ul>
+            <a href="#" class="button button1">Get started now</a>
+        </div>
+
+    </div>
+
+
+</div>
+   
+
+<script>
+function check()
+{
+    var checkbox = document.getElementById("checkbox");
+    var text1 = document.getElementsByClassName("text1");
+    var text2 = document.getElementsByClassName("text2");
+    for (var i = 0; i < text1.length; i++)
+    {
+        if (checkbox.checked == true)
+        {
+            text1[i].style.display = "block";
+            text2[i].style.display = "none";
+        }
+        else if (checkbox.checked == false)
+        {
+            text1[i].style.display = "none";
+            text2[i].style.display = "block";
+        }
+    }
+
+}   
+check(); 
+</script>
+
+
+</body>
+</html>
